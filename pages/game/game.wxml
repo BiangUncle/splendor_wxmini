@@ -1,0 +1,111 @@
+<!--pages/game.wxml-->
+<view class="container">
+  <view class="tokens">
+    <view class="token" 
+    wx:for="{{tokens}}"
+    wx:for-index="idx"
+    wx:for-item="num"
+    data-idx="{{idx}}"
+    data-num="{{num}}"
+    style="background:{{color_map[idx]}}"
+    bindtap="takeToken"
+    >
+      <view>
+        {{tokens[idx]}}
+      </view>
+    </view>
+
+  </view>
+  <view class="dev_cards">
+    <view wx:for="{{top}}" wx:for-index="idx" 
+        wx:for-item="card"
+        class="dev_card" data-idx="{{idx}}"
+        data-card="{{card}}"
+        bindtap="cardSelect">
+      <view class="card_pre">{{card.pretise}}</view>
+      <view class="reqs">
+        <view class="req"
+        wx:for="{{card.req}}" wx:for-index="req_idx" 
+        wx:for-item="num"
+        data-idx="{{req_idx}}"
+        data-num="{{num}}"
+        style="display: {{num > 0 ? 'flex' : 'none'}}"
+        >
+        <view class="re" style="display: {{num > 0 ? 'block' : 'none'}}; background: {{color_map[req_idx]}}"></view>
+        <view style="display: {{num > 0 ? 'block' : 'none'}}; line-height: 1em; margin-left: 0.2em;">{{num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="dev_cards">
+    <view wx:for="{{middle}}" wx:for-index="idx" 
+        wx:for-item="card"
+        class="dev_card" data-idx="{{idx}}"
+        data-card="{{card}}"
+        bindtap="cardSelect">
+      <view class="card_pre">{{card.pretise}}</view>
+      <view class="reqs">
+        <view class="req"
+        wx:for="{{card.req}}" wx:for-index="req_idx" 
+        wx:for-item="num"
+        data-idx="{{req_idx}}"
+        data-num="{{num}}"
+        style="display: {{num > 0 ? 'flex' : 'none'}}"
+        >
+        <view class="re" style="display: {{num > 0 ? 'block' : 'none'}}; background:{{color_map[req_idx]}}"></view>
+        <view style="display: {{num > 0 ? 'block' : 'none'}}; line-height: 1em; margin-left: 0.2em;">{{num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="dev_cards">
+    <view wx:for="{{bottom}}" wx:for-index="idx" 
+        wx:for-item="card"
+        class="dev_card" data-idx="{{idx}}"
+        data-card="{{card}}"
+        bindtap="cardSelect">
+      <view class="card_pre">{{card.pretise}}</view>
+      <view class="reqs">
+        <view class="req"
+        wx:for="{{card.req}}" wx:for-index="req_idx" 
+        wx:for-item="num"
+        data-idx="{{req_idx}}"
+        data-num="{{num}}"
+        style="display: {{num > 0 ? 'flex' : 'none'}}"
+        >
+        <view class="re" style="display: {{num > 0 ? 'block' : 'none'}}; background:{{color_map[req_idx]}}"></view>
+        <view style="display: {{num > 0 ? 'block' : 'none'}}; line-height: 1em; margin-left: 0.2em;">{{num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="noble_list">
+    <view wx:for="{{nobles}}" wx:for-index="idx" 
+        wx:for-item="noble"
+        class="noble" data-idx="{{idx}}"
+        data-card="{{noble}}"
+        bindtap="jsonGame">
+        <view class="noble_pretise">
+          {{noble.pretise}}
+        </view>
+        <view class="n_reqs">
+          <view class="n_req" wx:for="{{noble.req}}"
+          wx:for-index='req_idx' wx:for-item="num"
+          style="display: {{num > 0 ? 'block' : 'none'}}; background:{{color_map[req_idx]}}">
+            {{num}}
+          </view>
+        </view>
+    </view>
+  </view>
+  <view class="tokens">
+    <view class="token" 
+    wx:for="{{selected_token}}"
+    wx:for-item="idx"
+    data-idx="{{idx}}"
+    style="background:{{color_map[idx]}}"
+    bindtap="dropToken"
+    >
+    </view>
+
+  </view>
+</view>

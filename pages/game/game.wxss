@@ -1,0 +1,113 @@
+/* pages/game.wxss */
+
+.container {
+  padding: 0 0;
+}
+
+.dev_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  background-color: white;
+  height: 8em;
+  width: 5em;
+  margin: 0.5em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dev_cards {
+  display: flex;
+  justify-content: center;
+}
+
+.token {
+  margin: 0.5em;
+  height: 3em;
+  width: 3em;
+  border-radius: 1.5em;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 1000;
+}
+
+.tokens {
+  display: flex;
+  justify-content: center;
+}
+
+
+.card_pre {
+  height: 3em;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 20px;
+  display: flex;
+}
+
+.reqs {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 5em;
+  width: 100%;
+  padding-left: 0.3em;
+}
+
+.req {
+  align-content: center;
+  width: 100%;
+  display: flex;
+  margin: 0.1em;
+  height: 1em;
+}
+
+.re {
+  width: 1em;
+  height: 1em;
+  border-radius: 0.5em;
+}
+
+.noble {
+  height: 5em;
+  width: 5em;
+  border-radius: 1em;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noble_list {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1em;
+}
+
+.noble_pretise{
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  padding-left: 0.5em;
+}
+
+.n_reqs{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 3em;
+}
+
+.n_req{
+  width: 1em;
+  height: 1.5em;
+  margin: 0.2em;
+  display: flex;
+  text-align: center;
+}

@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/game/game",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#BB7777",
+    "navigationBarTitleText": "Splendor",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#bb7777",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
